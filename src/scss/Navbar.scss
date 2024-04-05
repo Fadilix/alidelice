@@ -1,0 +1,38 @@
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 88px;
+    position: absolute;
+    z-index: 99;
+    backdrop-filter: blur(15px);
+
+    .alida-logo {
+        font-family: "Dancing Script", cursive;
+        font-size: 50px;
+        font-weight: bold;
+        transition: .3s all ease;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.04;
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            gap: 20px;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
