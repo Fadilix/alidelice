@@ -1,6 +1,10 @@
+import Card from "./Card";
+
 const LeGateau = () => {
     return (
-        <div>LeGateau</div>
+        <div>
+            <Card />
+        </div>
     )
 }
 

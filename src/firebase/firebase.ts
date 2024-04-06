@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "alida-miam",
   storageBucket: "alida-miam.appspot.com",
   messagingSenderId: "496970700907",
-  appId: "1:496970700907:web:49fc12f89eb19ec418b92e"
+  appId: "1:496970700907:web:49fc12f89eb19ec418b92e",
 };
 
 // Initialize Firebase
