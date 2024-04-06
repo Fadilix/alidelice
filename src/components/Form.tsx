@@ -15,9 +15,18 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
         quantity: 0,
     })
 
+    const clearInputData = () => {
+        setCommanData({
+            firstName: "",
+            room: "",
+            quantity: 0,
+        })
+    }
+
     const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (window.confirm("Voulez vous confirmer la commande")) {
+        const text = `Monsieur ${CommanData.firstName} (Salle ${CommanData.room}),\nVous avez commandé une quantité de ${CommanData.quantity} gâteau(x)\nÊtes vous sur de vouloir confirmer votre commande ?`
+        if (window.confirm(text)) {
 
             if (!CommanData.firstName || !CommanData.quantity || !CommanData.room) {
                 toast.error("Vous devez renseigner tous les champs",
@@ -28,6 +37,10 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                 toast("Merci d'avoir commandé chez AliDélice",
                     { icon: '🎊', style }
                 );
+                setTimeout(() => {
+                    toast.success("Vous serez livré d'ici peu", { style });
+                }, 1000);
+                clearInputData();
             }
         } else {
             return;
@@ -67,6 +80,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                 <div className="row">
                     <label htmlFor="">Salle</label>
                     <select name="room" id="" value={CommanData.room} onChange={handleInputChange}>
+                        <option value="" disabled>Selectionnez votre classe</option>
                         <option value="L1A">L1A</option>
                         <option value="L1B">L1B</option>
                         <option value="L1C">L1C</option>
