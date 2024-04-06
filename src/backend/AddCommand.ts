@@ -11,6 +11,7 @@ const addCommand = async (
       firstName,
       room,
       quantity,
+      delivered: false,
     });
     console.log("Document written with ID:", docRef.id);
   } catch (e: any) {

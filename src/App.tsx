@@ -1,5 +1,7 @@
 import { Toaster } from "react-hot-toast";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./routes/routes";
 
 const App = () => {
   return (
@@ -8,7 +10,7 @@ const App = () => {
         position="top-right"
         reverseOrder={false}
       />
-      <Home />
+      <RouterProvider router={routes} />
     </div>
   )
 }

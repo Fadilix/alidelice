@@ -1,6 +1,17 @@
+import { useCommands } from "../backend/useCommands";
+
 const AdminPage = () => {
+    const { commands } = useCommands();
+    console.log(commands);
     return (
-        <div>AdminPage</div>
+        <div>
+            hello
+            {commands.map((command) => (
+                <div>
+                    {command.firstName}
+                </div>
+            ))}
+        </div>
     )
 }
 
