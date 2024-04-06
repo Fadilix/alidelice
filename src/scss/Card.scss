@@ -1,5 +1,10 @@
+// {
+//     transition: .3s all ease;
+// }
+
 .card-container {
     .card {
+        transition: .3s all ease;
         width: 400px;
         height: 500px;
         display: flex;
@@ -92,9 +97,9 @@
                 color: black;
             }
 
-            &:hover {
-                transform: rotateY(15deg)
-            }
+            // &:hover {
+            //     transform: rotateY(15deg)
+            // }
 
         }
 

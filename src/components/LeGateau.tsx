@@ -17,7 +17,7 @@ const LeGateau = () => {
                     isCommanding={isCommanding}
                 />
 
-                <Form isCommanding={isCommanding}/>
+                <Form isCommanding={isCommanding} />
             </div>
 
         </div>
