@@ -20,6 +20,22 @@
         backdrop-filter: brightness(.4);
     }
 
+    animation: upDown 2s;
+    transition: .3s all ease;
+    background-color: black;
+
+    @keyframes upDown {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
     p {
         position: relative;
         width: 30%;
@@ -32,9 +48,19 @@
         all: unset;
         position: relative;
         z-index: 2;
-        padding: 8px;
+        padding: 12px;
         border-radius: 8px;
         border: 1px solid rgb(80, 55, 20);
-        font-weight: bold;
+        // font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        transition: .3s all ease;
+        width: 250px;
+        color: white;
+
+        &:hover {
+            width: 280px;
+            box-shadow: 0 0 5px white;
+        }
     }
 }

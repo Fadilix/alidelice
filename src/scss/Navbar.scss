@@ -4,7 +4,7 @@
     justify-content: space-around;
     width: 100vw;
     height: 88px;
-    position: absolute;
+    position: fixed;
     z-index: 99;
     backdrop-filter: blur(15px);
 
@@ -31,6 +31,26 @@
                 a {
                     color: white;
                     text-decoration: none;
+
+                    position: relative;
+                    transition: .3s all ease;
+
+                    &::after {
+                        content: "";
+                        width: 0;
+                        height: 5px;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        background-color: brown;
+                        z-index: -1;
+                        transition: .3s all ease;
+
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
                 }
             }
         }
