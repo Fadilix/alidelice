@@ -1,0 +1,63 @@
+.card-container {
+    .card {
+        width: 400px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .image {
+            width: 90%;
+            height: 90%;
+            background: url("../assets/thecupcake.jpg");
+            background-size: cover;
+        }
+
+        .text {
+            text-transform: uppercase;
+        }
+
+        .stars {
+            display: flex;
+
+            img {
+                width: 30px;
+            }
+        }
+
+        .command {
+            all: unset;
+            border: 1px solid burlywood;
+            padding: 8px;
+            text-align: center;
+            width: 85%;
+            font-weight: bold;
+            position: relative;
+            transition: .3s;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: beige;
+                width: 100%;
+                height: 0;
+                z-index: -1;
+                transition: .3s;
+
+            }
+
+            &:hover::after {
+                height: 100%;
+            }
+
+            &:hover p {
+                color: black;
+            }
+
+        }
+
+    }
+}

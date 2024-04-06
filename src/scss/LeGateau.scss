@@ -1,0 +1,15 @@
+.legateau-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 500px;
+
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        // text-s
+    }
+}
