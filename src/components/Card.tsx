@@ -1,7 +1,12 @@
 import "../scss/Card.scss"
 import star from "../assets/svgs/star.svg"
 
-const Card = () => {
+type CardProps = {
+    handleCommand: () => void,
+    isCommanding: boolean
+}
+
+const Card: React.FC<CardProps> = ({ handleCommand, isCommanding }) => {
     return (
         <div className="card-container">
             <div className="card">
@@ -16,7 +21,15 @@ const Card = () => {
                     <img src={star} alt="star-rating" />
                     <img src={star} alt="star-rating" />
                 </div>
-                <button className="command"><p>Commander</p></button>
+                <button className="command" onClick={handleCommand}>
+                    {
+                        !isCommanding ? (
+                            <p>Commander</p>
+                        ) : (
+                            <p>Annuler</p>
+                        )
+                    }
+                </button>
             </div>
         </div>
     )
