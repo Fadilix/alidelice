@@ -11,10 +11,45 @@
             height: 90%;
             background: url("../assets/thecupcake.jpg");
             background-size: cover;
+            position: relative;
+            overflow: hidden;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+            transition: .3s all ease;
+            border: .1px solid rgb(41, 41, 41);
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: .3s all ease;
+                z-index: -1;
+                background: transparent;
+            }
+
+            &:hover::after {
+                background: linear-gradient(to top, #000000, #ffffff00);
+            }
+
+            .description {
+                position: absolute;
+                bottom: -50%;
+                transition: 1s all ease;
+            }
+
+            &:hover .description {
+                bottom: 4%;
+            }
         }
 
         .text {
             text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
         }
 
         .stars {
@@ -27,7 +62,7 @@
 
         .command {
             all: unset;
-            border: 1px solid burlywood;
+            border: 1px solid palegoldenrod;
             padding: 8px;
             text-align: center;
             width: 85%;
@@ -55,6 +90,10 @@
 
             &:hover p {
                 color: black;
+            }
+
+            &:hover {
+                transform: rotateY(15deg)
             }
 
         }
