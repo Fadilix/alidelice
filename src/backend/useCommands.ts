@@ -8,6 +8,7 @@ type commandType = {
   room: string;
   quantity: number;
   delivered: boolean;
+  timestamp: string;
 };
 
 export const useCommands = () => {
@@ -25,7 +26,7 @@ export const useCommands = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [commands]);
 
   return { commands };
 };

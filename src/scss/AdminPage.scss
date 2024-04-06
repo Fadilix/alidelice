@@ -1,0 +1,58 @@
+.admin-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    background: url("../assets/choco_cupcake.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        backdrop-filter: brightness(.3);
+        z-index: -1;
+    }
+
+    table {
+        margin-top: 30px;
+
+        border-collapse: collapse;
+
+        tr {
+            height: 50px;
+        }
+
+        tr,
+        th,
+        td {
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            width: calc(20%);
+        }
+
+        td {
+            button {
+                all: unset;
+                cursor: pointer;
+                width: 100%;
+                height: 50px;
+                background: rgba(114, 175, 245, 0.256);
+                transition: .3s all ease;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: rgba(16, 119, 238, 0.256);
+                }
+            }
+        }
+    }
+}

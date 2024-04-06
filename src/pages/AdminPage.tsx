@@ -1,16 +1,66 @@
+import { updateCommand } from "../backend/updateCommand";
 import { useCommands } from "../backend/useCommands";
+import "../scss/AdminPage.scss"
+import { RingLoader } from "react-spinners";
 
 const AdminPage = () => {
     const { commands } = useCommands();
     console.log(commands);
+
+    const handleDelivery = (id: string) => {
+        const data = getUserById(id)
+        updateCommand(id, { ...data, delivered: true })
+    }
+
+    const getUserById = (id: string) => {
+        const res = commands.filter((command) => command.id === id)
+        return res;
+    }
+
+    const formatDate = (date: string) => {
+        const dat = new Date(date);
+        return dat.toLocaleString();
+    }
+
+    const notDeliveredYet = commands.filter((command) => command.delivered === false).reverse();
+
     return (
-        <div>
-            hello
-            {commands.map((command) => (
-                <div>
-                    {command.firstName}
-                </div>
-            ))}
+        <div className="admin-container">
+            <h1>AlidAdmin</h1>
+
+            {notDeliveredYet ? (
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <th>Prénom</th>
+                            <th>Salle</th>
+                            <th>Quantité</th>
+                            <th>Timestamp</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {notDeliveredYet
+                            .map((command) => (
+                                <tr>
+                                    <td>{command.firstName}</td>
+                                    <td>{command.room}</td>
+                                    <td>{command.quantity}</td>
+                                    <td>{formatDate(command.timestamp)}</td>
+                                    <td>
+                                        <button
+                                            className="deliver"
+                                            onClick={() => { handleDelivery(command.id) }}
+                                        >
+                                            Livrer
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
+            ) : <RingLoader />}
+
         </div>
     )
 }
