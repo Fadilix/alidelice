@@ -13,6 +13,28 @@ a {
   cursor: pointer;
 }
 
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #1d5462;
+}
+
 body {
   overflow-x: hidden;
   background-color: black;
