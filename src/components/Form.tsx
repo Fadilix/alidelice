@@ -58,6 +58,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
             transition: ".8s all",
             overflow: "hidden",
             width: !isCommanding ? "0px" : "100%",
+            height: !isCommanding ? "0px" : "auto",
         }}>
             <form action="" style={{
                 display: "flex",
