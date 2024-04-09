@@ -10,7 +10,9 @@ const LeGateau = () => {
     }
     return (
         <div className="legateau-container">
-            <h1>Découvrez Le Gâteau d'AliDélice</h1>
+            <h1 style={{
+                textAlign: "center"
+            }}>Découvrez Le Gâteau d'AliDélice</h1>
             <div className="legateau">
                 <Card
                     handleCommand={handleCommand}

@@ -18,3 +18,14 @@
         // text-s
     }
 }
+
+
+
+@media screen and (max-width: 702px) {
+    .legateau-container {
+        .legateau {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

@@ -22,7 +22,7 @@ form {
         // width for differents elements
         select {
             width: 270px;
-            
+
         }
 
         input {
@@ -100,4 +100,27 @@ form {
         }
     }
 
+}
+
+
+@media screen and (max-width: 702px) {
+    form {
+
+        height: 400px;
+        .row {
+            width: 100%;
+
+            select {
+                width: 90%;
+            }
+            input {
+                width: 85%;
+            }
+        }
+
+        button[type="submit"] {
+            width: 85%;
+            margin-left: -40px
+        }
+    }
 }
