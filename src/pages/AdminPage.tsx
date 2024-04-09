@@ -59,7 +59,14 @@ const AdminPage = () => {
                             ))}
                     </tbody>
                 </table>
-            ) : <RingLoader />}
+
+            ) : (
+
+                <div className="ring-loader">
+                    <RingLoader />
+                </div>
+            )
+            }
 
         </div>
     )
