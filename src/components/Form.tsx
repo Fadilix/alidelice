@@ -60,7 +60,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
         setCommanData((prev) => ({ ...prev, [name]: value }));
     }
 
-    console.log(CommanData);
+    // console.log(CommanData);
     return (
         <div
             className='form-container'
