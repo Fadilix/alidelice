@@ -9,7 +9,12 @@
 
 
     .legateau {
+        // width: 100%;
+        // overflow: hidden;
         display: flex;
+        // align-items: center;
+        justify-content: center;
+
     }
 
     h1 {
@@ -24,6 +29,7 @@
 @media screen and (max-width: 702px) {
     .legateau-container {
         .legateau {
+            display: block;
             flex-direction: column;
             gap: 10px;
         }

@@ -10,6 +10,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        // background: red;
 
         .image {
             width: 90%;
@@ -103,5 +104,28 @@
 
         }
 
+    }
+}
+
+
+@media screen and (max-width: 702px) {
+    .card-container {
+        .card {
+            width: 90vw;
+
+            .image {
+                width: 100%;
+
+                .description {
+                    position: absolute;
+                    bottom: -60%;
+                    transition: 1s all ease;
+                }
+            }
+
+            .command {
+                width: 94.5%;
+            }
+        }
     }
 }

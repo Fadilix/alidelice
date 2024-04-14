@@ -43,7 +43,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                 clearInputData();
 
 
-                
+
             }
         } else {
             return;
@@ -57,12 +57,15 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
 
     console.log(CommanData);
     return (
-        <div style={{
-            transition: ".8s all",
-            overflow: "hidden",
-            width: !isCommanding ? "0px" : "100%",
-            height: !isCommanding ? "0px" : "auto",
-        }}>
+        <div
+            className='form-container'
+            style={{
+                transition: ".8s all",
+                overflow: "hidden",
+                width: !isCommanding ? "0px" : "100%",
+                height: !isCommanding ? "0px" : "auto",
+            }}
+        >
             <form action="" style={{
                 display: "flex",
                 flexDirection: "column",

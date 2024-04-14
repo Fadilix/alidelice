@@ -64,3 +64,11 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .landing-page {
+        p {
+            width: 70%;
+        }
+    }
+}

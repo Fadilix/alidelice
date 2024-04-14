@@ -104,23 +104,27 @@ form {
 
 
 @media screen and (max-width: 702px) {
-    form {
+    .form-container {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        height: 400px;
-        .row {
-            width: 100%;
+        form {
 
-            select {
-                width: 90%;
+            height: 400px;
+
+            .row {
+                width: 100%;
+
+                // select {
+                //     width: 90%;
+                // }
+
+                // input {
+                //     width: 85%;
+                // }
             }
-            input {
-                width: 85%;
-            }
-        }
-
-        button[type="submit"] {
-            width: 85%;
-            margin-left: -40px
         }
     }
 }
