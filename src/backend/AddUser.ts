@@ -13,16 +13,16 @@ const addUser = async (username: string) => {
   const usernames = users.map((user) => user.username);
   try {
     if (!usernames.includes(username)) {
-      const docRef = await addDoc(collection(db, "user"), {
+      await addDoc(collection(db, "user"), {
         username,
         createdAt: Date.now(),
       });
-      console.log("Document written with ID:", docRef.id);
+      //   console.log("Document written with ID:", docRef.id);
     } else {
-      toast.error("User already exists", { style: style });
+      toast.error("User already exists", { style });
     }
   } catch (e: any) {
-    console.error("Error adding document", e.message);
+    toast.error("Error adding document" + e.message, { style });
   }
 };
 
