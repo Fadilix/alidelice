@@ -5,7 +5,7 @@ import { RingLoader } from "react-spinners";
 
 const AdminPage = () => {
     const { commands } = useCommands();
-    console.log(commands);
+    // console.log(commands);
 
     const handleDelivery = (id: string) => {
         const data = getUserById(id)
