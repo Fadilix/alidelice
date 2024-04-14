@@ -43,11 +43,11 @@ const AdminPage = () => {
                         {notDeliveredYet
                             .map((command) => (
                                 <tr>
-                                    <td>{command.firstName}</td>
-                                    <td>{command.room}</td>
-                                    <td>{command.quantity}</td>
-                                    <td>{formatDate(command.timestamp)}</td>
-                                    <td>
+                                    <td data-cell="Prénom">{command.firstName}</td>
+                                    <td data-cell="Salle">{command.room}</td>
+                                    <td data-cell="Quantité">{command.quantity}</td>
+                                    <td data-cell="Timestamp">{formatDate(command.timestamp)}</td>
+                                    <td data-cell="Action">
                                         <button
                                             className="deliver"
                                             onClick={() => { handleDelivery(command.id) }}

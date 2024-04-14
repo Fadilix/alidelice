@@ -54,6 +54,10 @@
                 }
             }
         }
+
+        tr:nth-child(odd) {
+            background: rgb(71, 71, 71);
+        }
     }
 
     .ring-loader {
@@ -62,4 +66,32 @@
         height: 50%;
         transform: translate(-50%, -50%);
     }
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 90vw;
+
+        thead {
+            display: none;
+        }
+
+        tr,
+        th,
+        td {
+            text-align: start;
+        }
+
+        td {
+            display: block;
+            padding: .5rem 1rem;
+        }
+
+        td::before {
+            content: attr(data-cell) ": ";
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+    }
+
 }
