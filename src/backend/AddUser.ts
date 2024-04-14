@@ -4,7 +4,7 @@ import { useUsers } from "./useUsers";
 import toast from "react-hot-toast";
 import { style } from "../toastStyles/darkMode";
 
-// type userType ={
+// type userType = {
 //     username: string,
 //     createdAt: string;
 // }
