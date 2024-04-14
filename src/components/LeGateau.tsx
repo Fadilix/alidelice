@@ -9,7 +9,7 @@ const LeGateau = () => {
         setIsCommaing(!isCommanding);
     }
     return (
-        <div className="legateau-container">
+        <div className="legateau-container" id="legateau">
             <h1 style={{
                 textAlign: "center"
             }}>Découvrez Le Gâteau d'AliDélice</h1>

@@ -41,6 +41,9 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                     toast.success("Vous serez livré d'ici peu", { style });
                 }, 1000);
                 clearInputData();
+
+
+                
             }
         } else {
             return;

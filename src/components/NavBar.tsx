@@ -6,8 +6,8 @@ const NavBar = () => {
             <div className="alida-logo">AliDélice</div>
             <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Buy cakes</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#legateau">Buy cakes</a></li>
                 </ul>
             </nav>
         </div>
