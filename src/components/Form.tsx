@@ -33,14 +33,19 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                     { style }
                 )
             } else {
-                await addCommand(CommanData.firstName, CommanData.room, CommanData.quantity);
-                toast("Merci d'avoir commandé chez AliDélice",
-                    { icon: '🎊', style }
-                );
-                setTimeout(() => {
-                    toast.success("Vous serez livré d'ici peu", { style });
-                }, 1000);
-                clearInputData();
+                try {
+
+                    await addCommand(CommanData.firstName, CommanData.room, CommanData.quantity);
+                    toast("Merci d'avoir commandé chez AliDélice",
+                        { icon: '🎊', style }
+                    );
+                    setTimeout(() => {
+                        toast.success("Vous serez livré d'ici peu", { style });
+                    }, 1000);
+                    clearInputData();
+                } catch (e: any) {
+                    toast.error("Une erreur est survenue, veuillez réessayer ultérieurement !", { style })
+                }
 
 
 
