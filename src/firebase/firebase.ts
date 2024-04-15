@@ -1,20 +1,18 @@
+import { getFirestore } from "firebase/firestore";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-
 // https://firebase.google.com/docs/web/setup#available-libraries
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD4F6b5_YSX9uYNeE1fTkNEPD1c_pnBalk",
-  authDomain: "alida-miam.firebaseapp.com",
-  projectId: "alida-miam",
-  storageBucket: "alida-miam.appspot.com",
-  messagingSenderId: "496970700907",
-  appId: "1:496970700907:web:49fc12f89eb19ec418b92e",
+  apiKey: "AIzaSyCsTF_OMs2Uv2cT-GtqVhQUg3HVNiXCEsE",
+  authDomain: "memory-card-99e66.firebaseapp.com",
+  projectId: "memory-card-99e66",
+  storageBucket: "memory-card-99e66.appspot.com",
+  messagingSenderId: "892950645580",
+  appId: "1:892950645580:web:dd21628b4881ea91fb9de9",
 };
-// Initialize Firebase
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// Export firestore database
-// It will be imported into your react app whenever it is needed
 export const db = getFirestore(app);
