@@ -1,16 +1,17 @@
 import { getFirestore } from "firebase/firestore";
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCsTF_OMs2Uv2cT-GtqVhQUg3HVNiXCEsE",
-  authDomain: "memory-card-99e66.firebaseapp.com",
-  projectId: "memory-card-99e66",
-  storageBucket: "memory-card-99e66.appspot.com",
-  messagingSenderId: "892950645580",
-  appId: "1:892950645580:web:dd21628b4881ea91fb9de9",
+  apiKey: "AIzaSyDkd8yHdnZQ9QzLqqVrKhM27bmSMBEN7nk",
+  authDomain: "xbetrecharge-17c51.firebaseapp.com",
+  projectId: "xbetrecharge-17c51",
+  storageBucket: "xbetrecharge-17c51.appspot.com",
+  messagingSenderId: "721236533121",
+  appId: "1:721236533121:web:fb6b12fe67c3daebd3d280",
+  measurementId: "G-JBREB6T9K4"
 };
 
 // Initialize Firebase
