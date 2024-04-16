@@ -22,13 +22,15 @@ const Card: React.FC<CardProps> = ({ handleCommand, isCommanding }) => {
                     <img src={star} alt="star-rating" />
                 </div>
                 <button className="command" onClick={handleCommand}>
-                    {
-                        !isCommanding ? (
-                            <p>Commander</p>
-                        ) : (
-                            <p>Annuler</p>
-                        )
-                    }
+                    <a href="#commanding" style={{ textDecoration: "none" }}>
+                        {
+                            !isCommanding ? (
+                                <p>Commander</p>
+                            ) : (
+                                <p>Annuler</p>
+                            )
+                        }
+                    </a>
                 </button>
             </div>
         </div>

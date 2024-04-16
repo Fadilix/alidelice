@@ -74,12 +74,14 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                 height: !isCommanding ? "0px" : "auto",
             }}
         >
-            <form action="" style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center"
-            }}
+            <form
+                id="commanding"
+                action="" style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center"
+                }}
                 onSubmit={handleFormSubmit}
             >
                 {/* <div className='row'>
