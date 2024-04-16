@@ -44,7 +44,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                         }, 1000);
                         clearInputData();
                     } else {
-                        toast.success("Votre quantité commandée doit être positif et supérieur à 0");
+                        toast.error("Votre quantité commandée doit être positive et supérieur à 0");
                     }
                 } catch (e: any) {
                     toast.error("Une erreur est survenue, veuillez réessayer ultérieurement !", { style })
