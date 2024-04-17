@@ -49,9 +49,6 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                 } catch (e: any) {
                     toast.error("Une erreur est survenue, veuillez réessayer ultérieurement !", { style })
                 }
-
-
-
             }
         } else {
             return;
