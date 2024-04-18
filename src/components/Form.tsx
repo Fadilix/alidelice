@@ -111,7 +111,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
 
                 <div className="row">
                     <label htmlFor="">Quantité</label>
-                    <input type="number" name="quantity" id="" value={CommanData.quantity} onChange={handleInputChange} />
+                    <input type="number" name="quantity" id="" step="1" value={CommanData.quantity} onChange={handleInputChange} />
                 </div>
 
                 <button type="submit">Valider la commande</button>
