@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ handleCommand, isCommanding }) => {
                 <div className="image">
                     <p className="description">Plongez dans l'expérience ultime de la gourmandise avec Le Gateau d'AliDélice : une création culinaire exquise, mêlant harmonieusement une symphonie de saveurs exotiques et de textures délicates. Chaque bouchée est une invitation à un voyage gustatif inoubliable, une ode à la perfection artisanale.</p>
                 </div>
-                <p className="text">Le Gâteau</p>
+                <p className="text">Le Gâteau (100f)</p>
                 <div className="stars">
                     <img src={star} alt="star-rating" />
                     <img src={star} alt="star-rating" />

@@ -25,7 +25,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
 
     const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const text = `M.(Mme) ${CommanData.firstName} (Salle ${CommanData.room}),\nVous avez commandé une quantité de ${CommanData.quantity} gâteau(x)\nÊtes vous sur de vouloir confirmer votre commande ?`
+        const text = `M.(Mme) ${CommanData.firstName} (Salle ${CommanData.room}),\nVous avez commandé une quantité de ${CommanData.quantity} (${100 * CommanData.quantity} francs) gâteau(x)\nÊtes vous sur de vouloir confirmer votre commande ?`
         if (window.confirm(text)) {
 
             if (!CommanData.firstName || !CommanData.quantity || !CommanData.room) {
