@@ -39,7 +39,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                     if (CommanData.quantity > 0) {
                         if (!CommanData.quantity.toString().includes(".")) {
                             if (CommanData.quantity > 40) {
-                                toast.error("Quantité en stock inssuffisant")
+                                toast.error("Quantité en stock inssuffisante")
                             } else {
                                 setCommanding(!Commanding);
                                 await addCommand(CommanData.firstName, CommanData.room, CommanData.quantity);
