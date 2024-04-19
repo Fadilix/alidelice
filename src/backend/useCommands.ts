@@ -32,7 +32,8 @@ export const useCommands = () => {
 
   useEffect(() => {
     fetchData();
-  }, [commands]);
+    // console.log("hello, world");
+  }, []);
 
   return { commands };
 };

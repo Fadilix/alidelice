@@ -29,7 +29,7 @@ export const useUsers = () => {
 
   useEffect(() => {
     fetchData();
-  }, [users]);
+  }, []);
 
   return { users };
 };
