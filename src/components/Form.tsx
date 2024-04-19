@@ -3,12 +3,14 @@ import "../scss/Form.scss";
 import { toast } from "react-hot-toast";
 import { style } from '../toastStyles/darkMode';
 import { addCommand } from '../backend/AddCommand';
+import { BeatLoader } from 'react-spinners';
 
 type FormType = {
     isCommanding: boolean;
 
 }
 const Form: React.FC<FormType> = ({ isCommanding }) => {
+    const [Commanding, setCommanding] = useState(false);
     const [CommanData, setCommanData] = useState({
         firstName: "",
         room: "",
@@ -35,14 +37,24 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
             } else {
                 try {
                     if (CommanData.quantity > 0) {
-                        await addCommand(CommanData.firstName, CommanData.room, CommanData.quantity);
-                        toast("Merci d'avoir commandé chez AliDélice",
-                            { icon: "🎊", style }
-                        );
-                        setTimeout(() => {
-                            toast.success("Vous serez livré d'ici peu", { style });
-                        }, 1000);
-                        clearInputData();
+                        if (!CommanData.quantity.toString().includes(".")) {
+                            if (CommanData.quantity > 40) {
+                                toast.error("Quantité en stock inssuffisant")
+                            } else {
+                                setCommanding(!Commanding);
+                                await addCommand(CommanData.firstName, CommanData.room, CommanData.quantity);
+                                toast("Merci d'avoir commandé chez AliDélice",
+                                    { icon: "🎊", style }
+                                );
+                                setTimeout(() => {
+                                    toast.success("Vous serez livré d'ici peu", { style });
+                                }, 1000);
+                                clearInputData();
+                                setCommanding(false);
+                            }
+                        } else {
+                            toast.error("La quantité doit être un entier");
+                        }
                     } else {
                         toast.error("Votre quantité commandée doit être positive et supérieur à 0");
                     }
@@ -113,8 +125,12 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                     <label htmlFor="">Quantité</label>
                     <input type="number" name="quantity" id="" step="1" value={CommanData.quantity} onChange={handleInputChange} />
                 </div>
+                {!Commanding ? (
 
-                <button type="submit">Valider la commande</button>
+                    <button type="submit">Valider la commande</button>
+                ) : (
+                    <BeatLoader color='#fff' />
+                )}
             </form>
         </div>
     )
