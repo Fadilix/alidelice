@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# AliDélice
+### [live preview](https://alidelice.vercel.app/)
+Alidélice is an app I created to help my friend manage her Diwali cake sales at school more effectively. It gives her better visibility throughout the school, not just in a few classes, so she can sell all her cakes and avoid bringing unsold cakes back home. I'm really happy with the results.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies used
+- React
+- TypeScript
+- Firebase
+- SCSS
 
-Currently, two official plugins are available:
+## Screenshots:
+### Homepage
+![image](https://github.com/Fadilix/alidelice/assets/121851593/3e65b65a-aa08-452a-9cf7-6b1cba821348)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Command Diwali cake
+![image](https://github.com/Fadilix/alidelice/assets/121851593/fffb2406-1c61-46c3-8cc3-036c5d072613)
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
