@@ -42,7 +42,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                                 toast.error("Quantité en stock inssuffisante")
                             } else {
                                 setCommanding(!Commanding);
-                                
+
                                 await addCommand(CommanData.firstName, CommanData.room, CommanData.quantity);
                                 toast("Merci d'avoir commandé chez AliDélice",
                                     { icon: "🎊", style }
