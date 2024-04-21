@@ -44,6 +44,7 @@ const Form: React.FC<FormType> = ({ isCommanding }) => {
                                 setCommanding(!Commanding);
 
                                 await addCommand(CommanData.firstName, CommanData.room, CommanData.quantity);
+                                
                                 toast("Merci d'avoir commandé chez AliDélice",
                                     { icon: "🎊", style }
                                 );
