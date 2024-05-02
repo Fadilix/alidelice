@@ -25,4 +25,3 @@ const addCommand = async (
 };
 
 export { addCommand };
-
