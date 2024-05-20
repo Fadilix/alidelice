@@ -13,6 +13,7 @@ type userType = {
 export const useUsers = () => {
   const [users, setusers] = useState<userType[]>([]);
 
+  
   const fetchData = async () => {
     try {
       await getDocs(collection(db, "user")).then((querySnapshot) => {
