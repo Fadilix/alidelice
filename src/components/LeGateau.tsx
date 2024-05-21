@@ -4,9 +4,9 @@ import { useState } from "react";
 import Form from "./Form";
 
 const LeGateau = () => {
-    const [isCommanding, setIsCommaing] = useState(false);
+    const [isCommanding, setIsCommanding] = useState(false);
     const handleCommand = () => {
-        setIsCommaing(!isCommanding);
+        setIsCommanding(!isCommanding);
     }
     return (
         <div className="legateau-container" id="legateau">
